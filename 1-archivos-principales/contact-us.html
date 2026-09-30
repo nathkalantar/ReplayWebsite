@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact · REPLAY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+<main id="top">
+<section class="phero"><div class="wrap">
+  <div class="crumb"><a href="./">Home</a> <span>/</span> <a href="the-masters.html">The Masters</a> <span>/</span> <span>Contacts</span></div>
+  <h1>Contacts</h1>
+  
+  
+</div><img class="star" src="starburst.svg" alt=""><img class="blob" src="blob.svg" alt=""></section>
+<section class="sec" style="padding-top:1rem"><div class="wrap split">
+  <div class="prose"><p class="lead">For any queries related to the programme and the application process, applicants are kindly requested to consult the <a href="faq.html">FAQ</a> prior to contacting us at:</p></div>
+  <div class="note" style="background:var(--blue);color:var(--paper);box-shadow:10px 10px 0 var(--ink)">
+    <p style="margin:0 0 .6rem;font:700 .75rem/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--lime)">Email</p>
+    <p id="mail" style="margin:0 0 1.2rem;font:400 clamp(1.1rem,3vw,2rem)/1.1 var(--f-display);word-break:break-all;user-select:all">replaymasters@ulusofona.pt</p>
+    <p style="margin:0;display:flex;gap:.8rem;flex-wrap:wrap"><button class="btn" id="copy" type="button">Copy address</button><a class="btn paper" href="faq.html">Read the FAQ</a></p>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="img-map.js"></script>
+<script src="site.js"></script>
+<script>document.getElementById('copy').addEventListener('click',function(){var b=this,t='replaymasters@ulusofona.pt';
+function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1600)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);});}});</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Games · REPLAY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>#games .card:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--ink)}#games .card .ph img{transition:transform .3s}#games .card:hover .ph img{transform:scale(1.04)}</style>
+</head>
+<body data-page="games">
+<div id="site-header"></div>
+<main id="top">
+<section class="phero"><div class="wrap">
+  <div class="crumb"><a href="./">Home</a> <span>/</span> <span>Games</span></div>
+  <h1>Games</h1>
+  
+  <div class="intro"><p>Discover more games and stay updated by following us on itch.io: <a href="https://replaymasters.itch.io" target="_blank" rel="noopener">replaymasters.itch.io</a>.<br>Here are some of the games featured so far:</p></div>
+</div><img class="star" src="starburst.svg" alt=""><img class="blob" src="blob.svg" alt=""></section>
+<section class="sec" style="padding-top:1rem"><div class="wrap"><div class="cards" id="games"></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="img-map.js"></script>
+<script src="site.js"></script>
+<script src="data-games.js"></script><script>
+var G=document.getElementById('games');
+G.innerHTML=GAMES.map(function(g,i){return '<button class="card" data-i="'+i+'" style="text-align:left;font:inherit;cursor:pointer;padding:0"><span class="ph"><img src="'+R(g.th)+'" alt="" loading="lazy"></span><span class="in"><h3 style="font:400 1.35rem/1 var(--f-display);text-transform:uppercase">'+esc(g.t)+'</h3><p>'+esc(g.by)+'</p><span class="more">See game →</span></span></button>';}).join('');
+G.addEventListener('click',function(e){var b=e.target.closest('[data-i]');if(!b)return;var g=GAMES[+b.getAttribute('data-i')];
+ var links=(g.play?'<a href="'+g.play+'" target="_blank" rel="noopener">Play it here! ↗</a>':'')+(g.links||[]).map(function(l){return '<a href="'+l[1]+'" target="_blank" rel="noopener">'+esc(l[0])+' ↗</a>';}).join('')+(g.v?'<a href="https://www.youtube.com/watch?v='+g.v+'" target="_blank" rel="noopener">Watch video ↗</a>':'');
+ openDialog('<div class="top" style="background:var(--pink)"><div><span class="role">Games</span><h2>'+esc(g.t)+'</h2></div></div><div class="bd"><p><b>'+esc(g.by)+'</b></p>'+(g.p||[]).map(function(t){return '<p>'+esc(t)+'</p>';}).join('')+
+ (g.q?'<p><b>Students\' comment:</b></p>'+g.q.map(function(t){return '<p>'+esc(t)+'</p>';}).join(''):'')+
+ '<div class="links">'+links+'</div><div class="gal">'+g.im.map(function(s){return '<span><img src="'+R('/images/Games%20Images/'+s)+'" alt="'+esc(g.t)+' screenshot" loading="lazy"></span>';}).join('')+'</div></div>');});
+</script>
+</body>
+</html>
