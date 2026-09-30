@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Admissions and Requirements · REPLAY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.rd{font:400 1.02rem/1.65 var(--f-sub);max-width:68ch}
+.sec .lead-in{font-weight:600;font-size:1.12rem;margin-bottom:2rem}
+.tip{font-size:.95rem;color:var(--muted);margin-top:1.6rem;padding-left:1rem;border-left:3px solid var(--pink)}
+.sec.ink .tip{color:var(--muted-inv)}
+.steps4{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+.steps4 li{border:2px solid var(--paper);padding:1.4rem;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.steps4 .n{width:44px;height:44px;display:grid;place-items:center;font:400 1.2rem/1 var(--f-display);color:var(--ink);background:var(--lime)}
+.steps4 li:nth-child(2) .n{background:var(--orange)}.steps4 li:nth-child(3) .n{background:var(--pink)}.steps4 li:nth-child(4) .n{background:var(--paper)}
+.steps4 h3{font:800 1.15rem/1.2 var(--f-sub);margin:.3rem 0 0}
+.steps4 .rd{font-size:.95rem;margin:0}
+@media (max-width:980px){.steps4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps4{grid-template-columns:1fr}}
+.callout{background:var(--lime);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:1.3rem 1.5rem;margin-bottom:2rem}
+.callout .rd{margin:0;font-size:1.12rem}
+.sub3{font:800 1.3rem/1.2 var(--f-sub);margin:0 0 .6rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.4rem 0}
+@media (max-width:800px){.two{grid-template-columns:1fr}}
+.box{border:2px solid var(--ink);padding:1.3rem 1.4rem;background:var(--raised)}
+.box .rd{margin:.7rem 0 0}
+.box .tag{font:700 .78rem/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:.5em .7em;display:inline-block}
+.box.no .tag{background:var(--ink);color:var(--paper)}.box.yes .tag{background:var(--lime);color:var(--ink)}
+.facts3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:.6rem}
+@media (max-width:900px){.facts3{grid-template-columns:1fr}}
+.facts3>div{border-top:4px solid var(--ink);padding-top:.9rem}
+.facts3 .rd{font-size:.97rem;margin:.5rem 0 0}
+.k{font:700 .75rem/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase}
+.deadline{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;margin-top:1.8rem;background:var(--pink);border:2px solid var(--ink);padding:1rem 1.3rem;box-shadow:6px 6px 0 var(--ink)}
+.deadline b{font:800 1.15rem/1.3 var(--f-sub)}
+.sec.navy{background:#0b1f5c;color:var(--paper)}
+.sec.navy h2,.sec.navy h3{color:var(--paper)}
+.sec.navy a{color:var(--lime)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-bottom:2rem}
+@media (max-width:860px){.stats{grid-template-columns:1fr}}
+.stats>div{border:2px solid var(--paper);padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.stats>div.hi{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.stats b{font:400 clamp(1.9rem,3.6vw,2.8rem)/1 var(--f-display)}
+.stats span{font:500 .95rem/1.5 var(--f-sub)}
+.panel-l{background:rgba(244,242,234,.06);border:1px solid rgba(244,242,234,.25);padding:1.4rem 1.5rem}
+.panel-l h3{font:800 1.15rem/1.3 var(--f-sub);margin:0 0 1rem}
+.ticks,.crosses{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:.7rem}
+.ticks li,.crosses li{position:relative;padding-left:2rem}
+.ticks li::before,.crosses li::before{position:absolute;left:0;top:.15em;width:1.35rem;height:1.35rem;display:grid;place-items:center;font:700 .8rem/1 var(--f-body)}
+.ticks li::before{content:"✓";background:var(--lime);color:var(--ink)}
+.crosses li::before{content:"✕";background:var(--pink);color:var(--ink)}
+.loans{margin-top:1.4rem;border-top:1px solid rgba(244,242,234,.25);padding-top:1.4rem}
+.loans h3{font:800 1.15rem/1.3 var(--f-sub);margin:0 0 .8rem}
+.schol{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1.4rem;align-items:start}
+@media (max-width:900px){.schol{grid-template-columns:1fr}}
+.sc-main,.sc-side{border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:1.6rem}
+.sc-main{background:var(--raised)}.sc-side{background:var(--pink)}
+.sc-side .ticks li::before{background:var(--paper)}
+.sc-main h3{font:400 clamp(1.4rem,2.6vw,2rem)/1 var(--f-display);text-transform:uppercase;margin:1rem 0 1.2rem}
+.sc-main h4{font:800 1.05rem/1.3 var(--f-sub);margin:1.4rem 0 .8rem}
+.cover{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:560px){.cover{grid-template-columns:1fr}}
+.cover>div{background:var(--blue);color:var(--paper);padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.5rem}
+.cover b{font:400 clamp(1.8rem,3.4vw,2.4rem)/1 var(--f-display)}
+.cover span{font:500 .9rem/1.45 var(--f-sub)}
+.split>div>h3{margin-top:.2rem}.split{row-gap:1.5rem}
+.prose p,.prose li{font-family:var(--f-sub);font-size:1.02rem;line-height:1.65}
+.kv td{font-family:var(--f-sub);font-size:.98rem;line-height:1.6}
+</style>
+</head>
+<body data-page="admissions">
+<div id="site-header"></div>
+<main id="top">
+<section class="phero"><div class="wrap">
+  <div class="crumb"><a href="./">Home</a> <span>/</span> <span>Admissions and Requirements</span></div>
+  <h1>Admissions and Requirements</h1>
+  
+  
+</div><img class="star" src="starburst.svg" alt=""><img class="blob" src="blob.svg" alt=""></section><nav class="tabs" aria-label="On this page"><div class="wrap"><a href="#application-req">Application Requirements</a><a href="#selection-criteria">Selection Criteria</a><a href="#appeal">Appeal</a><a href="#privacy">Privacy Statement</a><a href="#proof">English Language Proficiency</a><a href="#tuition">Tuition Fees</a><a href="#scholarships">Scholarships</a></div></nav>
+<section class="sec" id="application-req"><div class="wrap">
+  <h2>Application Requirements</h2>
+  <div class="note" style="background:var(--lime);margin-bottom:2.5rem"><p style="margin:0;font:400 clamp(1.3rem,3vw,2.2rem)/1.05 var(--f-display);text-transform:uppercase">The next call for applications will open in October 7, 2026.</p></div>
+  <div class="split">
+    <div><h3>Conditions</h3></div>
+    <div class="prose"><p>REPLAY is open to candidates of all nationalities who hold a Bachelor's or Master's degree in Game Studies.</p><p>Bachelor's or Master's degrees in other fields may also be considered, provided the candidate has relevant prior academic or professional experience related to the field of games, such as Game Design, Game Art, Game Programming, Game Sound, or Game Production.</p></div>
+    <div><h3>Application Form</h3></div>
+    <div class="prose"><ul><li>Application period: October 2026 to January 2027</li><li>Complete and submit the application form online by the specified deadline.</li><li>All required documents must be provided. Incomplete applications may be considered ineligible.</li></ul><p>The application form link will be available when the application period opens.</p></div>
+  </div>
+  <h3 style="margin-top:2.5rem">Required Documents</h3>
+  <p>Click on each topic to see the detailed requirements.</p>
+  <div class="acc"><details><summary>Identification Document</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A copy of your passport (for non-European or European citizens) or European identification card (for EU citizens only).</td></tr><tr><th>Recommendation</th><td>We recommend that the expiration date covers the entire duration of the master's program (until August 2029).</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Photograph</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A recent headshot photograph.</td></tr><tr><th>Submission format</th><td>JPG/PNG</td></tr></tbody></table></div></details><details><summary>Diploma</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A final university diploma from a Bachelor's (BA) or Master's (MA) degree, along with official transcripts.</td></tr><tr><th>Requirements</th><td>The diploma must meet at least the National Framework Qualifications level 8 or the European Qualifications Framework level 6. If the diploma is not in English, an official certified translation, including the university's stamp, is required.</td></tr><tr><th>Legalization</th><td>The diploma must be legally valid for international use. Depending on the country of issuance, this may require an apostille under the Hague Convention or notarization/legalization. It is the applicant's responsibility to verify and complete the appropriate legalization process according to the regulations in their country. For other cases, please check the <a href="faq.html">FAQ</a>.</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>CV (Curriculum Vitae)</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A CV describing your professional qualifications, work experience, completed projects, job positions, responsibilities, and relevant skills related to the games field.</td></tr><tr><th>Recommended structure</th><td>Europass</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Motivation Letter</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A motivation letter explaining why you are applying to REPLAY and why you are a good fit for the programme.</td></tr><tr><th>Content</th><td>The letter should address:<ul><li>the topics you want to explore;</li><li>your preferred types of game projects;</li><li>what you hope to achieve through this master's programme; and</li><li>the experiences you aim to create.</li></ul></td></tr><tr><th>Requirements</th><td>No specific format is required. Your name and the date must be included.</td></tr><tr><th>Limit</th><td>3,000 characters (excluding spaces).</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Post-Mortem</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A post-mortem of up to two games or projects you have worked on.</td></tr><tr><th>Content</th><td>Include your motivation, critical reflection on the work, key takeaways, and, for team projects, your role and what you learned from the teamwork.</td></tr><tr><th>Limit</th><td>2,000 characters per project (excluding spaces).</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Portfolio</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A portfolio using the provided REPLAY Portfolio Template, featuring a maximum of 5 games or projects across up to 7 pages.</td></tr><tr><th>Structure</th><td>Page 1: Short bio and photo. Pages 2–6: One project per page. Include the project name, your role, whether it was a solo or group project (and, if group, the number of members), 3–4 images, and a clickable link for more information. Page 7: Relevant links, such as itch.io, Steam, personal website, etc.</td></tr><tr><th>Template</th><td><a href="https://docs.google.com/presentation/d/1m-Ufmr1potfGKsFkpvw0gZfrVWVKyf-t/edit?usp=sharing&amp;ouid=104226947871178923149&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">REPLAY Portfolio Template</a>.</td></tr><tr><th>Important notes</th><td>The portfolio must follow this structure. The colour scheme, image layout, and text arrangement may be adjusted if necessary.</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Showreel</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A video with a maximum duration of 3 minutes showcasing your work and relevant skills.</td></tr><tr><th>Structure</th><td>First 30 seconds: A self-presentation where you talk to the camera. Following 1:30–2:30: A showcase of your projects, with subtitles indicating your role.</td></tr><tr><th>Requirements</th><td>Projects may include games, game design or production work, or animation/art pieces that demonstrate relevant skills. If the video includes group projects, add subtitles indicating your specific role or tasks. You may also use a voice-over to describe your work. The video must be accessible to the selection committee without requiring additional permission. YouTube Shorts are not accepted.</td></tr><tr><th>Submission format</th><td>Unlisted YouTube/Vimeo link or direct Google Drive file link. Folder links are not accepted.</td></tr></tbody></table></div></details><details><summary>English Language Proficiency</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>Proof of English language proficiency.</td></tr><tr><th>Requirements</th><td>Further requirements are listed <a href="#proof">below</a>.</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Residence Certificate</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>A residence certificate issued according to the candidate's municipality's registration rules, or a certificate issued by the candidate's employer or educational/training institution confirming their current full address. A recent utility bill or other official document showing the candidate's full name and current full address may also be accepted.</td></tr><tr><th>Requirements</th><td>The document must include:<ul><li>the candidate's full name;</li><li>current full address; and</li><li>date of issue.</li></ul>A signature and/or official stamp is preferable where applicable.</td></tr><tr><th>Validity</th><td>The Residence Certificate should preferably have been issued in October 2026 or later.</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details></div>
+  <p style="margin-top:1.5rem">For further information, please refer to our <a href="faq.html">FAQ section</a>.</p>
+</div></section>
+<section class="sec ink" id="selection-criteria"><div class="wrap">
+  <h2>Selection Criteria</h2>
+  <p class="rd lead-in">All eligible applicants will be assessed by members of the consortium taking into account the following elements:</p>
+  <ol class="steps4">
+    <li><span class="n">1</span><h3>Academic quality</h3><p class="rd">The applicant’s academic quality, judged primarily from the results of prior university studies.</p></li>
+    <li><span class="n">2</span><h3>Motivation</h3><p class="rd">The applicant’s motivation and justification of the application in relation to prior studies, work experience (if applicable) and future career plans towards the aims of REPLAY, judged from the CV in combination with the letter of motivation, analysis and portfolio/show reel.</p></li>
+    <li><span class="n">3</span><h3>English skills</h3><p class="rd">The applicant’s English language skills, judged from the certificate provided and from the interview.</p></li>
+    <li><span class="n">4</span><h3>Online interview</h3><p class="rd">Applicants with the highest scores resulting from the application package will be called for an online Interview in a date to be settled by the selection committee.</p></li>
+  </ol>
+  <p class="rd tip">Applicants that do not qualify for the interview will be informed by email.</p>
+</div></section><section class="sec" id="appeal"><div class="wrap">
+  <h2>Appeal</h2>
+  <div class="callout"><p class="rd">There’s no possibility for any appeal to the final list of selected applicants, <b>except if based on a specific procedural error by REPLAY consortium in the application process.</b></p></div>
+  <h3 class="sub3">Appeal procedure</h3>
+  <p class="rd">Please read the Selection Criteria as well as the Application Procedure carefully before submitting an appeal.</p>
+  <div class="two">
+    <div class="box no"><span class="tag">✕ Should not appeal</span><p class="rd">Candidates who fail to provide the required documents within the established timeframes should not submit an appeal.</p></div>
+    <div class="box yes"><span class="tag">✓ Have the right to appeal</span><p class="rd">Candidates who followed the Application Procedure and respected the Deadlines but were denied selection due to unmet Selection Criteria and have reasons to believe that a mistake has been made during the selection procedure have the right to appeal the Selection Board's decision.</p></div>
+  </div>
+  <div class="facts3">
+    <div><span class="k">What it is</span><p class="rd">The appeal procedure is concerned with how your proposal was handled in the evaluation and eligibility-checking process. It is not an automatic reevaluation.</p></div>
+    <div><span class="k">What is not considered</span><p class="rd">Please note that new information or clarifications that should have been in the proposal will not be taken into consideration.</p></div>
+    <div><span class="k">How to appeal</span><p class="rd">If after reading the above mentioned conditions you still have reasons to believe that a mistake has been made, please send an email to <a href="mailto:replaymasters@ulusofona.pt">replaymasters@ulusofona.pt</a> only with all the necessary information.</p></div>
+  </div>
+  <div class="deadline"><span class="k">Deadline</span><b>All appeals have to be submitted before the 5th of April.</b></div>
+  <p class="rd tip">Make sure to provide a correct e-mail address so that you can receive notifications on the status of your appeal. You will be contacted as soon as a decision has been made.</p>
+</div></section>
+<section class="sec" id="privacy" style="padding-top:0"><div class="wrap split">
+  <h2>Privacy Statement</h2>
+  <div class="prose note"><p style="margin:0">The European Education and Culture Executive Agency (EACEA), in the context of managing the Erasmus Mundus Joint Master Degrees, collects and processes the personal data of some of the candidates. In particular, certain data of the scholarship holders (students and scholars), non-scholarship holders and reserve list candidates is shared with the Agency through the EACEA Mobility Tool and treated according to the following <a href="https://eacea.ec.europa.eu/mobility/docs/privacy_statement_emt.pdf" target="_blank" rel="noopener">PRIVACY STATEMENT</a>.</p></div>
+</div></section>
+<div class="checker" aria-hidden="true"></div>
+<section class="sec" id="proof"><div class="wrap">
+  <h2>English Language Proficiency</h2>
+  <div class="prose" style="margin-bottom:1.5rem"><p>Applicants must demonstrate sufficient proficiency in English to participate fully in the programme. You may meet this requirement through one of the options below. Please provide the option that applies to your situation.</p><p>Most applicants will use Option 1. Options 2 and 3 apply only if you meet the specific conditions described below.</p><p>Click on each topic to see the detailed requirements.</p></div>
+  <div class="acc"><details><summary>Option 1 – English Language Certificate</summary><div class="body"><table class="kv"><tbody><tr><th>List</th><td><ul><li>IELTS: 6.0 overall, with no component below 6.0 (Academic IELTS);</li><li>TOEFL iBT: 80 overall, with a minimum of 17 in Listening, 18 in Reading, 20 in Speaking, and 17 in Writing;</li><li>TOEFL iBT (new scoring system): 4.0 overall, with a minimum of 4.0 in each section;</li><li>Pearson Test of English Academic (PTE Academic): 56 overall, with a minimum of 51 in each component;</li><li>Cambridge C2 Proficiency (formerly CPE): 169 overall, with a minimum of 162 in each component;</li><li>Cambridge B2 First (formerly FCE): 169 overall, with a minimum of 162 in each component;</li><li>Cambridge C1 Advanced (formerly CAE): 169 overall, with a minimum of 162 in each component;</li><li>Trinity Integrated Skills in English (ISE): ISE II, ISE III, or ISE IV, with a pass in each component;</li><li>LanguageCert English: B2 Communicator, with an overall score of 39 or above and a minimum of 25 in all skills.</li></ul></td></tr><tr><th>Validity</th><td>Certificates must be valid at the time of application. For the exams listed above, we only accept certificates issued from 2025 onwards (including 2025).</td></tr><tr><th>Alternative English Test</th><td>If you are unable to take any of the examinations listed above, you may submit a Duolingo English Test (DET) result. The minimum required score is 110 overall, with a minimum of 110 in Reading, Writing, Listening, and Speaking.</td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Option 2 – Degree from an Inner Circle Country</summary><div class="body"><table class="kv"><tbody><tr><th>What you need</th><td>Provide a higher education diploma from an institution in one of the following countries, where the programme was taught in English.</td></tr><tr><th>List</th><td><ul><li>United Kingdom</li><li>United States of America</li><li>New Zealand</li><li>Australia</li><li>Canada (except Quebec)</li><li>Ireland</li><li>Caribbean Islands</li><li>South Africa</li></ul></td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details><details><summary>Option 3 – English-language Degree and Waiver</summary><div class="body"><table class="kv"><tbody><tr><th>Condition</th><td>If your Bachelor's or Master's degree was or is fully taught and examined in English at a higher education institution outside the Inner Circle countries, you may request a waiver of the English language test requirement, provided that you meet the requirements below.</td></tr><tr><th>Requirements</th><td><p><b>Graduates:</b> You must have graduated within two years before the start of the REPLAY programme. You must provide an official university letter confirming that your degree was fully taught and examined in English.</p><p style="margin:0"><b>Students completing their degree:</b> You must be expected to graduate by the end of July, before the start of the REPLAY programme. You must provide an official university letter confirming that your degree is fully taught and examined in English and that you are expected to graduate by the end of July.</p></td></tr><tr><th>Submission format</th><td>PDF</td></tr></tbody></table></div></details></div>
+</div></section>
+<section class="sec navy" id="tuition"><div class="wrap">
+  <h2>Tuition Fees</h2>
+  <div class="stats">
+    <div><b>24</b><span>REPLAY will select a maximum of 24 students per intake.</span></div>
+    <div class="hi"><b>15.000 €</b><span>Tuition Fee for non-Scholarships students, for the whole study period of four semesters.</span></div>
+    <div><b>800–1000 €</b><span>It is estimated that students will need between 800-1000€ per month living expenses for the 24-month duration of their studies.</span></div>
+  </div>
+  <p class="rd lead-in">An Erasmus Mundus Scholarship will be granted to only a percentage of those places. For holders of an Erasmus+ scholarship (all categories) tuition fee is covered by the scholarship.</p>
+  <div class="two">
+    <div class="panel-l"><h3>What is included in the participation fees?</h3><ul class="ticks rd">
+      <li>Participation in all classes offered within REPLAY’s curriculum</li>
+      <li>Emergency and accident insurance according to the minimum requirements of the Erasmus+ Programme</li>
+      <li>Support in administrative and organisational issues by the consortium partners</li>
+      <li>Costs for enrollment at the consortium partner’s institutions</li>
+      <li>All examinations and issuing of the final diploma</li>
+      <li>There will be a budgeted sum for costs related with the thesis.</li></ul></div>
+    <div class="panel-l"><h3>What is not included in the participation fees?</h3><ul class="crosses rd">
+      <li>Travel costs from country of origin</li>
+      <li>Travel costs required for the mobility (to Lisbon for the 1st semester, to Genk for the 2nd semester, to Helsinki for the 3rd semester and to one of the consortium schools for the 4th semester and for the graduation ceremony)</li>
+      <li>Travel documents (passport, visas)</li>
+      <li>Accommodation and living expenses</li>
+      <li>Other costs (e.g. Study books, stationery, photocopies, etc.)</li></ul></div>
+  </div>
+  <div class="loans"><h3>Erasmus+ Master Loans</h3>
+    <p class="rd">Erasmus+ Master Loans allow students to apply for support for their Master’s studies abroad. Loans will be offered by participating banks and student loan agencies on favorable conditions to mobile students, including better than market interest rates and up to two years to allow graduates to get into a job before beginning repayment.</p>
+    <p class="rd">The loan scheme will be established in cooperation with the European Investment Bank Group and will be gradually rolled out across the Erasmus+ programme countries over the first few years of the programme.</p>
+    <p class="rd">Please get more information at <a href="http://ec.europa.eu/programmes/erasmus-plus/opportunities/individuals/students/erasmus-plus-master-degree-loans_en" target="_blank" rel="noopener">ec.europa.eu/programmes/erasmus-plus/opportunities/...</a></p></div>
+</div></section><section class="sec" id="scholarships"><div class="wrap">
+  <h2>Scholarships</h2>
+  <div class="schol">
+    <article class="sc-main">
+      <span class="lbl">For students</span>
+      <h3>Erasmus Mundus Scholarships</h3>
+      <div class="cover"><div><b>100%</b><span>Erasmus Mundus Scholarship will cover the total tuition fee</span></div><div><b>1.400 €</b><span>monthly allowance for the duration of the academic activities and/or maximum of 24 months, to cover installation, travel and subsistence costs</span></div></div>
+      <h4>Who is eligible</h4>
+      <ul class="ticks rd">
+        <li>Candidates are eligible for an Erasmus Mundus scholarship, awarded on the basis of excellence.</li>
+        <li>Candidates eligible for scholarships are students who have obtained a primary higher-education degree or can demonstrate a recognised equivalent according to national legislation and practices of the degree awarding country.</li></ul>
+      <h4>Good to know</h4>
+      <ul class="crosses rd">
+        <li>Students who have already obtained an EMJM scholarship or an Erasmus Mundus Master Course / Joint Doctorate scholarship are not eligible to apply for an additional scholarship under the EMJM action.</li>
+        <li>Erasmus+ scholarship holders cannot benefit from another EU funded scholarship scheme to follow the same EMJM course. This holds for the entire period of the course.</li></ul>
+    </article>
+    <article class="sc-side">
+      <span class="lbl" style="background:var(--paper)">For visiting scholars</span>
+      <p class="rd" style="margin-top:1rem">REPLAY welcomes applications from teachers who have significant publications or teaching experience in games or outstanding professional or creative experience in the field.</p>
+      <ul class="ticks rd">
+        <li>Applications will not be accepted unless they are indicative of teaching that fits closely with the curriculum.</li>
+        <li>Applications should be sent to the consortium leader and must include a full CV and portfolio/showreel if applicable.</li></ul>
+    </article>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="img-map.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>
