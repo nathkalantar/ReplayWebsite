@@ -66,7 +66,7 @@
     '<div><h3>Contact</h3><ul><li><a href="contact-us.html">Contact Us</a></li><li><a href="faq.html">FAQ</a></li></ul></div></div></div>' +
     '<div class="eu"><a href="' + ERASMUS + '"><svg width="66" height="44" viewBox="0 0 810 540" role="img" aria-label="Flag of the European Union"><rect width="810" height="540" fill="#003399"/><g fill="#ffcc00">' + stars + '</g></svg><span>Co-funded by<br>the European Union</span></a>' +
     '<p class="disc">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</p></div>' +
-    '</div></footer>';
+    '<p class="copy">Produção Multimédia © 2024 COFAC. Todos os direitos reservados.</p></div></footer>';
 
   var h = document.getElementById('site-header'); if (h) h.outerHTML = head;
   var f = document.getElementById('site-footer'); if (f) f.outerHTML = foot;
