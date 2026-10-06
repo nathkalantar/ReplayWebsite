@@ -198,3 +198,6 @@ button.person,button.card{color:var(--ink);-webkit-appearance:none;appearance:no
 [hidden]{display:none!important}
 dialog.pd .x{-webkit-appearance:none;appearance:none;background:var(--ink);color:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;padding:0;font:700 1.15rem/1 var(--f-body);box-shadow:3px 3px 0 rgba(15,15,17,.35);z-index:2}
 dialog.pd .x:hover,dialog.pd .x:focus-visible{background:var(--pink);color:var(--ink);outline:none}
+.callbar .apply{margin-left:auto;background:var(--pink);color:var(--ink);text-decoration:none;font:700 .8rem/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:.55rem .9rem;border:2px solid var(--paper);white-space:nowrap}
+.callbar .apply:hover,.callbar .apply:focus-visible{background:var(--lime);outline:none}
+@media (max-width:600px){.callbar .apply{margin-left:0}}

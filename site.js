@@ -46,7 +46,7 @@
   }).join('');
 
   var head = '<svg width="0" height="0" style="position:absolute" aria-hidden="true">' + LOGO + '</svg>' +
-    '<div class="callbar" role="status"><div class="wrap"><span class="dot" aria-hidden="true"></span><span>Call for application from October 2026 to January 2027</span></div></div>' +
+    '<div class="callbar" role="status"><div class="wrap"><span class="dot" aria-hidden="true"></span><span>Applications are open · 7 October 2026 to 8 January 2027</span><a class="apply" href="https://mundus.ulusofona.pt" target="_blank" rel="noopener">Apply now ↗</a></div></div>' +
     '<header class="site"><div class="wrap"><a class="home" href="./" aria-label="REPLAY home">' + logoSvg() + '</a>' +
     '<button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>' +
     '<nav aria-label="Main"><ul class="menu" id="menu">' + menu + '</ul></nav></div></header>';
@@ -66,7 +66,7 @@
     '<div><h3>Contact</h3><ul><li><a href="contact-us.html">Contact Us</a></li><li><a href="faq.html">FAQ</a></li></ul></div></div></div>' +
     '<div class="eu"><a href="' + ERASMUS + '"><svg width="66" height="44" viewBox="0 0 810 540" role="img" aria-label="Flag of the European Union"><rect width="810" height="540" fill="#003399"/><g fill="#ffcc00">' + stars + '</g></svg><span>Co-funded by<br>the European Union</span></a>' +
     '<p class="disc">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</p></div>' +
-    '<p class="copy">Produção Multimédia © 2024 COFAC. Todos os direitos reservados.</p></div></footer>';
+    '</div></footer>';
 
   var h = document.getElementById('site-header'); if (h) h.outerHTML = head;
   var f = document.getElementById('site-footer'); if (f) f.outerHTML = foot;
