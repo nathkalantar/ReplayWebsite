@@ -13,7 +13,7 @@
 *{box-sizing:border-box}
 html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:90px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{margin:0;overflow-x:clip;background:var(--paper) url("paper.jpg") center top/1600px auto repeat;color:var(--ink);font:400 16px/1.65 var(--f-body)}
+body{margin:0;overflow-x:clip;background:var(--paper) url("paper.jpg") 0 0/1536px 864px repeat;color:var(--ink);font:400 16px/1.65 var(--f-body)}
 a{color:inherit}
 img{max-width:100%}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
@@ -195,3 +195,6 @@ footer.site .copy{font-size:.75rem;color:#8d8b84;margin:1.4rem 0 0}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 button.person,button.card{color:var(--ink);-webkit-appearance:none;appearance:none}
 .sec.ink button.person{color:var(--paper)}
+[hidden]{display:none!important}
+dialog.pd .x{-webkit-appearance:none;appearance:none;background:var(--ink);color:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;padding:0;font:700 1.15rem/1 var(--f-body);box-shadow:3px 3px 0 rgba(15,15,17,.35);z-index:2}
+dialog.pd .x:hover,dialog.pd .x:focus-visible{background:var(--pink);color:var(--ink);outline:none}
